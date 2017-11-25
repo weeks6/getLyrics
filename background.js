@@ -1,10 +1,14 @@
-getLyrics = function(word){
+getLyrics = function (word) {
     var query = word.selectionText;
-    chrome.tabs.create({url: "https://genius.com/search?q=" + query});
- };
+    query = query.replace(/\s+/g, '-');
+    query = query.replace(/-–-/g, '-');
+
+    chrome.tabs.create({
+        url: "https://genius.com/" + query + '-lyrics'});
+};
 
 chrome.contextMenus.create({
- title: "Get lyrycs",
- contexts:["selection"],  // ContextType
- onclick: getLyrics // A callback function
+    title: "Get lyrycs",
+    contexts: ["selection"],
+    onclick: getLyrics
 });
