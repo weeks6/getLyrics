@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "Genius Lyrics",
+  "version": "1.0",
+  "description": "..",
+  "icons": {
+  },
+    
+    "content_scripts": [
+    {
+      "matches": [ "*://*/*" ],
+    "js": ["background.js"]
+
+        
+    }
+  ],
+  "background": {
+    "scripts": ["jquery321min.js", "background.js"]
+  },
+  "permissions": [
+    "contextMenus"
+  ],
+    
+    "browser_action": {
+        "default_title": "Genius Lyrics"
+    }
+	
+}
