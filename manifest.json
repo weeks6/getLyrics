@@ -14,7 +14,7 @@
     }
   ],
     "background": {
-        "scripts": ["jquery321min.js", "background.js"]
+        "scripts": ["background.js"]
     },
     "permissions": [
     "contextMenus"
